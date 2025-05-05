@@ -13,6 +13,6 @@ class Product(models.Model):
     stock=models.PositiveIntegerField()
     image=models.ImageField(upload_to='static/products')
 
-    def _str__(self):
+    def __str__(self):
 
         return self.name
