@@ -3,6 +3,6 @@
 {% for product in products %}
 
     <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200" height="400">
-    <a href="">{{ product.name }}</a>
+    <a href="{% url 'detail' product.pk %}">{{ product.name }}</a>
 
 {% endfor %}
