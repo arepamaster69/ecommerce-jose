@@ -1,5 +1,5 @@
 
-
+<a href="{% url 'create' %}">Añadir Producto</a>
 {% for product in products %}
 
     <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200" height="400">
