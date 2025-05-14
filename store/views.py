@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from store.models import Product
-from django.views.generic import ListView,DetailView,CreateView,UpdateView
+from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
 # Create your views here.
 
@@ -28,7 +28,10 @@ class ProductUpdateView(UpdateView):
     def get_success_url(self):
         return reverse_lazy("detail",kwargs={"pk": self.object.pk})
 
-
+class ProductDeleteView(DeleteView):
+    model= Product
+    template_name= "product_delete.html"
+    success_url= reverse_lazy("product_list")
 
 
 #fields="__all__" para todos los campos y si voy a trabajar solo unos cuantos ['name',]
