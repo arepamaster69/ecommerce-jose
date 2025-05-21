@@ -1,8 +1,15 @@
 <a href="{% url 'product_list' %}">Home</a>
 <a href="{% url 'create' %}">Crear</a>
-<a href="#">Logout</a>
+
+<form action="{% url 'logout' %}" method="post" >
+
+    {% csrf_token %}
+    <input type="submit" value="Logout">
+
+</form>
 
 {% block content %} 
+
 {% endblock %}
 
 

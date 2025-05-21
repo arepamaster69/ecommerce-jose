@@ -127,3 +127,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Redirrecionamiento Login y Logout
 
 LOGIN_REDIRECT_URL="product_list"
+LOGOUT_REDIRECT_URL="home"
