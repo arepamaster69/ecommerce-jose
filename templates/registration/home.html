@@ -1,0 +1,17 @@
+
+{% if user.is_authenticated %}
+
+    <p>Hola {{user.username}}</p>
+
+    <p>Haz click en el siguiente enlace para ver los productos</p>
+    <a href="{% url 'product_list' %}">tienda de jaifon </a>
+
+{% else %}
+
+    <p>Identificate</p>
+    <a href="{% url 'login' %}">Log In</a>
+    <p>Si no tienes cuenta</p>
+    <a href="{% url 'signup' %}">Sing Up</a>
+
+{% endif %}
+
