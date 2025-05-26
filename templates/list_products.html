@@ -1,11 +1,20 @@
 {% extends 'includes/nav.html' %}
+{% load static %}
+
 {% block content %}
-
-{% for product in products %}
-
-    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200" height="400">
-    <a href="{% url 'detail' product.pk %}">{{ product.name }}</a>
-
-   {% endfor %}
-
-   {% endblock %}
+<link rel="stylesheet" href="{% static 'css/product_list.css' %}">
+    <div class="product-list-container">
+        <div class="products-grid">
+            {% for product in products %}
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <a href="{% url 'detail' product.pk %}" class="product-name">{{ product.name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

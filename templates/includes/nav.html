@@ -1,15 +1,26 @@
-<a href="{% url 'product_list' %}">Home</a>
-<a href="{% url 'create' %}">Crear</a>
 
-<form action="{% url 'logout' %}" method="post" >
-
-    {% csrf_token %}
-    <input type="submit" value="Logout">
-
-</form>
-
-{% block content %} 
-
-{% endblock %}
-
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Ecommerce</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'product_list' %}" class="nav-link">Home</a>
+            <a href="{% url 'create' %}" class="nav-link">Crear</a>
+        </div>
+        
+        <form action="{% url 'logout' %}" method="post" class="logout-form">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
