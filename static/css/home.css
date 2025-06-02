@@ -1,0 +1,83 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+/* Sección de bienvenida */
+.welcome-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.username {
+    color: #4a6fa5;
+    font-weight: bold;
+}
+.instruction {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.store-link {
+    display: inline-block;
+    background-color: #4a6fa5;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.store-link:hover {
+    background-color: #3a5a80;
+}
+/* Sección de autenticación */
+.auth-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+.auth-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.auth-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+.auth-link:hover {
+    background-color: #3e8e41;
+}
+/* Responsive design */
+}
+@media (max-width: 768px) {
+    .welcome-section, .auth-section {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
+    .welcome-message {
+        font-size: 20px;
+    }

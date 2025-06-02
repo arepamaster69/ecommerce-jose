@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.signup-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+}
+.signup-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+/* Estilos del formulario */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-label {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 14px;
+}
+.signup-form input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+.signup-form input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.help-text {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+/* Estilos del botón */
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+/* Enlace de login */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+.login-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .signup-card {
+        padding: 20px;
+    }
+    
+    .signup-form input {
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+    }
+}

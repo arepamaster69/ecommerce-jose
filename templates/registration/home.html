@@ -1,17 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supersonic Store</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% if user.is_authenticated %}
+            <div class="welcome-section">
+                <p class="welcome-message">Hola <span class="username">{{user.username}}</span></p>
+                <p class="instruction">Haz clic en el siguiente enlace para ver los productos</p>
+                <a href="{% url 'product_list' %}" class="store-link">Supersonic Store</a>
+            </div>
 
-{% if user.is_authenticated %}
-
-    <p>Hola {{user.username}}</p>
-
-    <p>Haz click en el siguiente enlace para ver los productos</p>
-    <a href="{% url 'product_list' %}">tienda de jaifon </a>
-
-{% else %}
-
-    <p>Identificate</p>
-    <a href="{% url 'login' %}">Log In</a>
-    <p>Si no tienes cuenta</p>
-    <a href="{% url 'signup' %}">Sing Up</a>
-
-{% endif %}
-
+               {% else %}
+            <div class="auth-section">
+                <p class="auth-message">Ingresa a tu cuenta</p>
+                <a href="{% url 'login' %}" class="auth-link">Log In</a>
+                <p class="auth-message">Si no tienes cuenta</p>
+                <a href="{% url 'signup' %}" class="auth-link">Sign Up</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
